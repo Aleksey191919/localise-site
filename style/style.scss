@@ -1,0 +1,584 @@
+
+// *********COLORS*************************************
+$coral: #FF9C7D;
+$orange: #FF6336;
+$white: white;
+$black: #000;
+$milk: #FFF8E4;
+
+// **********FONTS*************************************
+$roboto: Roboto;
+$graphik: "Graphik LC TT";
+$fontWeight400: 400;
+$fontWeight600: 600;
+
+@mixin font ($fs, $fw, $lh) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin flex ($df, $jc, $ai) {
+    display: $df;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: url("../fonts/graphik/GraphikLCG-Regular.ttf");
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: $graphik;
+    font-weight: normal;
+    font-size: 14px;
+    color: $black;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    gap: 51px;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 30px 0;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+}
+
+.nav__link {
+    @include font(15px, 400, 20px);
+}
+
+div.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 51px;
+}
+
+.login {
+    display: flex;
+    margin-right: 51px;
+    position: absolute;
+    gap: 10px;
+    right: 0;
+}
+
+.btn {
+    border: 1px solid #808080;
+    width: 120px;
+    background-color: transparent;
+}
+
+.btn--orange {
+    background-color: $orange;
+    border-color: $orange;
+}
+
+.btn-link {
+    text-align: center;
+    padding: 0 22.8px;
+    @include font(16px, 600, 45px)
+}
+
+.link--white {
+    color: $white;
+}
+
+.promo-container {
+    display: flex;
+    margin: 95px 75px 0 55px;
+    padding: 18px 0 0 20px;
+    align-items: flex-start;
+}
+
+.promo-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+}
+
+.promo__btn {
+    width: 160px;
+    height: 60px;
+}
+
+.promo__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo__h1 {
+    display: flex;
+    margin-bottom: 51px;
+    @include font(65px, 600, 70px);
+}
+
+.promo__p {
+    margin-right: 68px;
+    margin-bottom: 30px;
+    @include font(25px, 400, 35px);
+}
+
+.promo__span{
+    display: block;
+    margin-bottom: 35px;
+    @include font(15px, 400, 25px);
+}
+
+.promo-img-container {
+    display: flex;
+    padding-bottom: 45px;
+}
+
+.brand__container {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    padding: 10px 75px;
+    background-color: $coral;
+    margin-bottom: 90px;
+}
+
+.brand__h2 {
+    display: flex;
+    text-align: center;
+    margin: 95px 230px 70px 340px;
+    @include font(50px, 600, 60px);
+}
+
+ul.brand__list {
+    display: flex;
+    gap: 84px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 94px;
+}
+
+.content-container {
+    @include flex(flex, center, center);
+    max-width: 1290px;
+    flex-direction: column;
+    gap: 250px;
+    margin: 0 75px;
+}
+
+.twoside {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.content__text {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    width: 50%;
+    gap: 30px;
+}
+
+.pr-165 {
+    padding-right: 165px;
+}
+
+.pl-138 {
+    padding-left: 138px;
+}
+
+.pr-138 {
+    padding-right: 138px;
+}
+
+.pr-70 {
+    padding-right: 70px;
+}
+
+.content__graphic {
+    @include flex(flex, center, center);
+    flex-shrink: 0;
+    width: 50%;
+}
+
+.content-code {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9.5px;
+    background-color: $milk;
+    max-height: 580px;
+}
+
+.php-code {
+    @include flex(flex, flex-start, center);
+    background-color: $white;
+    margin: 119px 66px 0 66px;
+    padding: 30px;
+    text-align: left;
+}
+
+.text-php {
+    display: flex;
+    margin: 0 0 118px 133px;
+    font-family: $roboto;
+    @include font(14px, 400, 30px);
+    
+}
+
+code {
+    min-width: 350px;
+    color: #008;
+    font-family: $roboto;
+    text-align: left;
+    @include font(14px, 400, 30px);
+}
+
+.code--black {
+    font-size: 13px;
+}
+
+.code--purple {
+    color: #9876AA;
+}
+
+.code--light-green {
+    color: #009900;
+}
+
+.code--green {
+    color: #393;
+}
+
+.code--dark-green {
+    color: #004000;
+}
+
+.code--light-blue{
+    color: #00F;
+}
+
+.content__underline {
+    text-decoration: underline;
+    @include font(20px, 400, 30px);
+}
+
+.content__img {
+    width: 100%;
+}
+
+.content__h2 {
+    @include font(50px, 600, 60px);
+}
+
+.content__p {
+    text-align: left;
+    @include font(20px, 400, 30px);
+}
+
+a.content__link {
+    display: inline-block;
+    @include font(20px, 600, 30px);
+}
+
+.content-app-container {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    margin-top: 150px;
+    padding-top: 120px;
+    background-color: $milk;
+}
+
+.app__container {
+    @include flex(flex, space-between, center);
+    flex-direction: column;
+    gap: 54px;
+    margin: 58px 75px 93px 75px;
+    padding: 0 40px 47px 40px;
+  }
+
+  .app__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.app__thirdside {
+    @include flex(flex, space-between, center);
+    gap: 110px;
+}
+
+.app__h3 {
+    text-align: center;
+    margin: 20px 0 23px 0;
+    @include font(25px, 600, 35px);
+}
+.app__p {
+    text-align: center;
+    padding: 0 10px;
+    @include font(18px, 400, 25px);
+}
+
+.app__img-container {
+    margin-top: 20px;
+}
+
+.app__img {
+    display: block;
+}
+
+.app__p > .content__underline {
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.content-services-container {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    margin: 154px 78px 95px 75px;
+    padding-bottom: 120px;
+}
+
+.services-container {
+    @include flex(flex, center, center);
+    gap: 31px;
+    margin-top: 75px;
+}
+.services__link {
+    @include font(20px, 400, 30px);
+}
+
+.services__h3 {
+    margin-bottom: 38px;
+    @include font(30px, 600, 40px);
+}
+
+.services-img-container {
+    margin-bottom: 45px;
+    min-height: 201px;
+}
+
+.services__link__container {
+    margin-top: 25px;
+}
+.content__p {
+    @include font(20px, 400, 30px);
+}
+
+.content-boss-container {
+    @include flex(flex, space-between, center);
+    gap: 85px;
+    padding: 53px 75px 105px 75px;
+    background-color: #C9E8F2;
+}
+
+.boss__text_p {
+    padding: 10px 0 28px 0;
+    @include font(30px, 400, 40px);
+}
+
+.content__boss__text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text__revolut__img {
+    display: block;
+    max-width: 116px;
+}
+
+.boss__text__span {
+    padding-bottom: 10px;
+}
+
+.content-cake-container {
+    @include flex(flex, center, center);
+    background-color: #DABC98;
+}
+
+.cake-container-img {
+    @include flex(flex, center, center);
+    margin-left: 54px;
+}
+
+.cake__logo-container {
+    display: flex;
+    gap: 70px;
+    border-left: 1px solid $black;
+    padding: 20px 0 22px 63px;
+    margin-left: 125px;
+    margin-right: 120px;
+}
+
+.cake__h2 {
+    margin: 116px 0 111px 67px;
+    @include font(35px, 600, 50px);
+}
+
+.cake__span {
+    @include font(15px, 400, 25px);
+}
+
+.mt-14 {
+    margin-top: 14px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.content-banner-container {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    padding-top: 165px;
+    padding-bottom: 160px;
+}
+
+.banner__h2 {
+    text-align: center;
+    width: 50%;
+    @include font(65px, 600, 75px);
+}
+
+.banner__p {
+    text-align: center;
+    width: 35%;
+    margin-bottom: 25px;
+    @include font(25px, 400, 30px);
+}
+
+.banner__btn {
+    text-align: center;
+    padding: 0 30px;
+    border: none;
+    margin-top: 30px;
+    @include font(16px, 600, 60px);
+}
+
+.content-bottom-container {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    background-color: $coral;
+    padding: 95px 0 153px 0;
+}
+
+.bottom__h2 {
+    text-align: center;
+    width: 50%;
+    margin-bottom: 28px;
+    @include font(65px, 600, 75px);
+}
+
+.bottom__p {
+    text-align: center;
+    @include font(20px, 400, 30px);
+}
+
+.bottom__btn {
+    color: $white;
+    text-align: center;
+    padding: 0 45px;
+    background-color: $black;
+    border: none;
+    margin-top: 54px;
+    @include font(17px, 600, 60px);
+}
+
+.footer-container {
+    display: flex;
+    padding-top: 92px;
+    gap: 140px;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+}
+
+.footer-menu-container {
+    @include flex(flex, space-between, flex-start);
+    margin-right: 75px;
+    gap: 34px;
+    width: 100%;
+}
+
+.footer-column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-bottom: 95px;
+}
+
+.footer__item {
+    margin-top: 15px;
+}
+
+.footer__link {
+    @include font(15px, 400, 15px);
+}
+
+.footer-column__h3 {
+    margin-bottom: 5px;
+    @include font(20px, 600, 25px);
+}
+
+.left-column__h2 {
+    @include font(40px, 600, 35px);
+}
+
+.column-img-container {
+    display: flex;
+}
+
+.left-column__img {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.footer.content__link {
+    margin-top: 12px;
+}
+
+.footer-copyright {
+    @include flex(flex, space-between, center);
+    position: relative;
+    background-color: #EEEEEE;
+    padding: 48px 151px 45px 75px;
+}
+
+.copyright__content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.copyright__span {
+    @include font(12px, 400, 15px);
+}
+
+.footer-border {
+    border-top: 1px solid black;
+    width: 88%;
+    margin-right: 75px;
+    position: absolute;
+    top: 0;
+}

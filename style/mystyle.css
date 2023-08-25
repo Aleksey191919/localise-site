@@ -1,0 +1,70 @@
+
+@import url("./fonts/graphik/style.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Graphik';
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    gap: 51px;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 30px 0;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+}
+
+.nav__link {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+}
+
+div.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 51px;
+}
+
+.login {
+    display: flex;
+    margin-right: 51px;
+    position: absolute;
+    gap: 10px;
+    right: 0;
+}
+
+.btn {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 45px; 
+    border: 1px solid #808080;
+    max-width: 120px;
+    padding: 0 24px;
+    background-color: transparent;
+}
+
+.btn--orange {
+    background-color: #FF6336;
+    border-color: #FF6336;
+    color: white;
+}
+
